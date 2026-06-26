@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'Inter', sans-serif;
+  background-color: #F7F3EA;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-forestDeep antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(139, 155, 136, 0.25);
+}
+
+.hero-video-mask {
+  mask-image: radial-gradient(ellipse at center, black 42%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 42%, transparent 70%);
+}
+
+.glow-blur {
+  filter: blur(40px);
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(18px) rotate(4deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 10s ease-in-out infinite;
+}
